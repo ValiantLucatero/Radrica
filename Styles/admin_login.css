@@ -2,7 +2,7 @@ body{
   position:relative;
   background-image: url("../Resources/telon_fondo.jpg");
   background-size: 100%;
-  background-repeat: no-repeat;
+  background-repeat: initial;
   background-attachment: fixed;
 }
 .container{
