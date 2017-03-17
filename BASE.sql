@@ -14,6 +14,8 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 -- -----------------------------------------------------
 -- Schema mydb
 -- -----------------------------------------------------
+DROP DATABASE IF EXISTS `mydb`;
+CREATE DATABASE `mydb`;
 CREATE SCHEMA IF NOT EXISTS `mydb` DEFAULT CHARACTER SET utf8 ;
 USE `mydb` ;
 
@@ -144,7 +146,7 @@ ENGINE = InnoDB;
 -- Table `mydb`.`Precios`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb`.`Precios` (
-  `ID_Precio` INT NOT NULL,
+  `ID_Precio` INT NOT NULL AUTO_INCREMENT,
   `Precio` VARCHAR(45) NULL,
   PRIMARY KEY (`ID_Precio`))
 ENGINE = InnoDB;
@@ -159,7 +161,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Administradores` (
   `A.Pat_Administrador` VARCHAR(45) NULL,
   `A.Mat_Administrador` VARCHAR(45) NULL,
   `Contra_Administrador` VARCHAR(45) NULL,
-  `Tipo_Administrador` INT(2) NULL,
+  `Tipo_Administrador` INT NULL,
   PRIMARY KEY (`ID_Administrador`))
 ENGINE = InnoDB;
 
