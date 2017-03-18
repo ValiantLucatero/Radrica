@@ -4,9 +4,6 @@
     <meta charset="utf-8"/>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 		<meta name="viewpiort" content="width=device-width, initial-scale=1"/>
-    <?php
-
-    ?>
 
     <title>Iniciar sesion Administrador</title>
     <link href="../Styles/admin_login.css"  rel="stylesheet" type="text/css">
@@ -14,7 +11,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
-
+    <?php
+  		SESSION_START();
+  		SESSION_UNSET();
+  		SESSION_DESTROY();
+  	?>
     <div class="container">
       <nav class="navbar navbar-default" id="navegation">
         <div class="container-fluid">
@@ -28,7 +29,7 @@
         <div class="form-group">
           <label for="user" class="col-xs-5 col-sm-3 col-md-2 col-lg-2 control-label">Usuario: </label>
           <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10">
-            <input type="text" id="user" class="form-control" placeholder="Nombre de usuario" maxlength="40" name="admin_user"/>
+            <input type="text" id="user" class="form-control" placeholder="Correo de administrador" maxlength="40" name="admin_user"/>
           </div>
         </div>
         <div class="form-group">

@@ -6,7 +6,7 @@ echo'<!DOCTYPEhtml>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewpiort" content="width=device-width, initial-scale=1"/>
 
-    <title>Iniciar sesion Administrador</title>
+    <title>Página principal administrador</title>
 
     <link href="../Styles/admin_login.css"  rel="stylesheet" type="text/css">
     <link href="../Resources/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
@@ -119,16 +119,67 @@ echo'<!DOCTYPEhtml>
 
     }
   }
-  echo '<div class="container">
-    <nav class="navbar navbar-default" id="navegation">
+  echo '<div class="container">';
+    if(isset($_SESSION['correo'],$_SESSION['Nombre_Administrador'],$_SESSION['Tipo_Administrador'])){
+    echo '<nav class="navbar navbar-default" id="navegation">
       <div class="container-fluid">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">'.$_SESSION['Nombre_Administrador'].'</a>
-        </div>
+      <div class="container-fluid">
+          <a class="navbar-brand" href="#">'.$_SESSION['Nombre_Administrador'].'</a>';
+          if($_SESSION['Tipo_Administrador']==1){
+            //Tiene posibilidad de agregar administradores tipo 2
+          }
+        echo '</div>
       </div>
     </nav>
-    Bienvenido '.$_SESSION['Nombre_Administrador'].'
-    </div>';
+    <h1 class="text-center">Bienvenido '.$_SESSION['Nombre_Administrador'].'</h1>
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+        <div class="thumbnail">
+          <div class="caption">
+            <h3>Agregar películas</h3>
+            <p>Agregar películas a la base de datos.</p>
+            <p><a href="#" class="btn btn-primary" role="button">Agregar película</a></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+        <div class="thumbnail">
+          <div class="caption">
+            <h3>Eliminar películas</h3>
+            <p>Eliminar películas a la base de datos.</p>
+            <p><a href="#" class="btn btn-primary" role="button">Eliminar película</a></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+        <div class="thumbnail">
+          <div class="caption">
+            <h3>Agregar a Cartelera</h3>
+            <p>Agregar películas ya registradas a la cartelera.</p>
+            <p><a href="#" class="btn btn-primary" role="button">Agregar a cartelera</a></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+        <div class="thumbnail">
+          <div class="caption">
+            <h3>Eliminar de cartelera</h3>
+            <p>Eliminar películas de la cartelera.</p>
+            <p><a href="#" class="btn btn-primary" role="button">Eliminar</a></p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    ';
+    }
+    else{
+      header('location:error_ingreso.html');
+    }
+    echo '</div>';
 
 
     echo '<script src="../Resources/jquery/dist/jquery.js"></script>

@@ -11,11 +11,11 @@ body{
 }
 #navegation{
   margin-top: 1%;
-  margin-bottom: 5%;
+  margin-bottom: 4%;
   background-color: #FA2F2F;
 }
 #navegation a{
-  color: black;
+  color: #808080;
 }
 form{
   border: 1px solid lightgrey;
