@@ -40,7 +40,7 @@ if(isset($_POST['titulo'],$_POST['director'],$_POST['anio'],$_POST['duracion'],$
       $archivo = $_FILES["imagen_peli"]['name'];
 
       if($archivo!=""){
-        $destino="../Resources/imagenes_peliculas/".$_POST['titulo'].".jpg"; //Para que tenga el mismo nombre que el titulo
+        $destino="../Resources/".$_POST['titulo'].".jpg"; //Para que tenga el mismo nombre que el titulo
         if (copy($_FILES['imagen_peli']['tmp_name'],$destino)){
           $status="<br/>Archivo subido: <b>".$archivo."</b>";
           $y=1;
