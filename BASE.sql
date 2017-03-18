@@ -42,6 +42,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `mydb`.`Peliculas`
 -- -----------------------------------------------------
+--`Foto_Peliculas` BLOB NULL, ya no será necesario
 CREATE TABLE IF NOT EXISTS `mydb`.`Peliculas` (
   `ID_Peliculas` INT NOT NULL AUTO_INCREMENT,
   `Titulo_Peliculas` VARCHAR(45) NULL,
@@ -52,7 +53,6 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Peliculas` (
   `Sub_Peliculas` TINYINT(1) NULL,
   `Clasificacion_ID_Clasificacion` INT NOT NULL,
   `Sinopsis_Peliculas` VARCHAR(100) NULL,
-  `Foto_Peliculas` BLOB NULL,
   `Cast_Peliculas` VARCHAR(45) NULL,
   `Votos_Peliculas` INT NULL,
   PRIMARY KEY (`ID_Peliculas`, `Genero_ID_Genero`, `Clasificacion_ID_Clasificacion`),
