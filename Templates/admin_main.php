@@ -123,22 +123,42 @@ echo'<!DOCTYPEhtml>
     if(isset($_SESSION['correo'],$_SESSION['Nombre_Administrador'],$_SESSION['Tipo_Administrador'])){
     echo '<nav class="navbar navbar-default" id="navegation">
       <div class="container-fluid">
-      <div class="container-fluid">
-          <a class="navbar-brand" href="#">'.$_SESSION['Nombre_Administrador'].'</a>';
-          if($_SESSION['Tipo_Administrador']==1){
-            //Tiene posibilidad de agregar administradores tipo 2
-          }
-        echo '</div>
+        <div class="row">
+          <div class="col-xs-4 col-sm-2">
+            <a class="navbar-brand" href="#">'.$_SESSION['Nombre_Administrador'].'</a>
+          </div>
+          <div class="col-xs-offset-5 col-sm-offset-8 col-xs-3 col-sm-2">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle glyphicon glyphicon-user" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Cambiar Datos</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="admin_login.php"><span class="glyphicon glyphicon-off" aria-hidden="true"></span> Cerrar Sesión</a></li>
+              </ul>
+            </li>
+          </ul>
+          </div>
+        </div>
       </div>
-    </nav>
-    <h1 class="text-center">Bienvenido '.$_SESSION['Nombre_Administrador'].'</h1>
+    </nav>';
+    if(isset($_SESSION['creado_peli'])){
+      if($_SESSION['creado_peli']==1){
+        echo '<div class="alert alert-success alert-dismissible" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          La película se agregó correctamente.
+        </div>';
+        $_SESSION['creado_peli']="";
+      }
+    }
+    echo '<h1 class="text-center">Bienvenido '.$_SESSION['Nombre_Administrador'].'</h1>
     <div class="row">
       <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
         <div class="thumbnail">
           <div class="caption">
             <h3>Agregar películas</h3>
             <p>Agregar películas a la base de datos.</p>
-            <p><a href="#" class="btn btn-primary" role="button">Agregar película</a></p>
+            <p><a href="agregar_peliculas.php" class="btn btn-primary" role="button">Agregar película</a></p>
           </div>
         </div>
       </div>
@@ -173,16 +193,36 @@ echo'<!DOCTYPEhtml>
         </div>
       </div>
 
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+        <div class="thumbnail">
+          <div class="caption">
+            <h3>Agregar funciones</h3>
+            <p>Agregar funciones de películas en cartelera.</p>
+            <p><a href="#" class="btn btn-primary" role="button">Agregar funciones</a></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+        <div class="thumbnail">
+          <div class="caption">
+            <h3>Agregar/Eliminar administradores</h3>
+            <p>Agregar otros administradores secundarios.</p>
+            <p><a href="#" class="btn btn-primary" role="button">Agregar</a> <a href="#" class="btn btn-danger" role="button">Eliminar</a></p>
+          </div>
+        </div>
+      </div>
+
     </div>
     ';
     }
     else{
       header('location:error_ingreso.html');
     }
-    echo '</div>';
+    echo '</div>
 
 
-    echo '<script src="../Resources/jquery/dist/jquery.js"></script>
+    <script src="../Resources/jquery/dist/jquery.js"></script>
     <script src="../Resources/bootstrap/dist/js/bootstrap.min.js"></script>
   </body>
 </html>';

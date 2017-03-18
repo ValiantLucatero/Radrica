@@ -25,7 +25,7 @@
         </div>
       </nav>
       <h1 class="text-center">Ingreso Administrador</h1>
-      <form method="POST" action="admin_main.php" class="form-horizontal">
+      <form method="POST" action="admin_main.php" class="form-horizontal" id="loginadmin">
         <div class="form-group">
           <label for="user" class="col-xs-5 col-sm-3 col-md-2 col-lg-2 control-label">Usuario: </label>
           <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10">
