@@ -11,13 +11,13 @@ body{
 }
 #navegation{
   margin-top: 1%;
-  margin-bottom: 4%;
+  margin-bottom: 3%;
   background-color: #FA2F2F;
 }
 #navegation a{
-  color: #808080;
+  color: black;
 }
-form{
+form #loginadmin{
   border: 1px solid lightgrey;
   border-radius: 5px;
   padding: 5%;
