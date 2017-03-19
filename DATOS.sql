@@ -1,18 +1,18 @@
 USE mydb;
 
-INSERT INTO genero (genero) values ("Acción");
-INSERT INTO genero (genero) values ("Ciencia Ficción");
-INSERT INTO genero (genero) values ("Comedia");
-INSERT INTO genero (genero) values ("Drama");
-INSERT INTO genero (genero) values ("Erótica");
-INSERT INTO genero (genero) values ("Documental");
-INSERT INTO genero (genero) values ("Animación");
-INSERT INTO genero (genero) values ("Fantástica");
-INSERT INTO genero (genero) values ("Musical");
-INSERT INTO genero (genero) values ("Romance");
-INSERT INTO genero (genero) values ("Suspenso");
-INSERT INTO genero (genero) values ("Terror");
-INSERT INTO genero (genero) values ("Aventura");
+INSERT INTO Genero (Genero) values ("Acción");
+INSERT INTO Genero (Genero) values ("Ciencia Ficción");
+INSERT INTO Genero (Genero) values ("Comedia");
+INSERT INTO Genero (Genero) values ("Drama");
+INSERT INTO Genero (Genero) values ("Erótica");
+INSERT INTO Genero (Genero) values ("Documental");
+INSERT INTO Genero (Genero) values ("Animación");
+INSERT INTO Genero (Genero) values ("Fantástica");
+INSERT INTO Genero (Genero) values ("Musical");
+INSERT INTO Genero (Genero) values ("Romance");
+INSERT INTO Genero (Genero) values ("Suspenso");
+INSERT INTO Genero (Genero) values ("Terror");
+INSERT INTO Genero (Genero) values ("Aventura");
 
 INSERT INTO Clasificacion (Clasificacion) values ("AA");
 INSERT INTO Clasificacion (Clasificacion) values ("A");
