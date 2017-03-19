@@ -201,20 +201,20 @@ echo'<!DOCTYPEhtml>
             <p><a href="#" class="btn btn-primary" role="button">Agregar funciones</a></p>
           </div>
         </div>
-      </div>
-
-      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-        <div class="thumbnail">
-          <div class="caption">
-            <h3>Agregar/Eliminar administradores</h3>
-            <p>Agregar otros administradores secundarios.</p>
-            <p><a href="#" class="btn btn-primary" role="button">Agregar</a> <a href="#" class="btn btn-danger" role="button">Eliminar</a></p>
+      </div>';
+      if($_SESSION['Tipo_Administrador']==1){
+        echo '<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+          <div class="thumbnail">
+            <div class="caption">
+              <h3>Agregar/Eliminar administradores</h3>
+              <p>Agregar otros administradores secundarios.</p>
+              <p><a href="#" class="btn btn-primary" role="button">Agregar</a> <a href="#" class="btn btn-danger" role="button">Eliminar</a></p>
+            </div>
           </div>
-        </div>
-      </div>
+        </div>';
+      }
 
-    </div>
-    ';
+    echo '</div>';
     }
     else{
       header('location:error_ingreso.html');
