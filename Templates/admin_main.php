@@ -163,22 +163,13 @@ echo'<!DOCTYPEhtml>
         </div>
       </div>
 
-      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-        <div class="thumbnail">
-          <div class="caption">
-            <h3>Eliminar películas</h3>
-            <p>Eliminar películas a la base de datos.</p>
-            <p><a href="#" class="btn btn-primary" role="button">Eliminar película</a></p>
-          </div>
-        </div>
-      </div>
 
       <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
         <div class="thumbnail">
           <div class="caption">
             <h3>Agregar a Cartelera</h3>
             <p>Agregar películas ya registradas a la cartelera.</p>
-            <p><a href="#" class="btn btn-primary" role="button">Agregar a cartelera</a></p>
+            <p><a href="agregar_cartelera.php" class="btn btn-primary" role="button">Agregar a cartelera</a></p>
           </div>
         </div>
       </div>

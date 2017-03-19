@@ -6,7 +6,7 @@ echo'<!DOCTYPEhtml>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewpiort" content="width=device-width, initial-scale=1"/>
 
-    <title>Página principal administrador</title>
+    <title>Agregar películas</title>
 
     <link href="../Styles/admin_login.css"  rel="stylesheet" type="text/css">
     <link href="../Resources/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
@@ -21,7 +21,7 @@ echo'<!DOCTYPEhtml>
         <div class="container-fluid">
           <div class="row">
             <div class="col-xs-4 col-sm-2">
-              <a class="navbar-brand" href="#">'.$_SESSION['Nombre_Administrador'].'</a>
+              <a class="navbar-brand" href="admin_main.php">'.$_SESSION['Nombre_Administrador'].'</a>
             </div>
             <div class="col-xs-offset-5 col-sm-offset-8 col-xs-3 col-sm-2">
             <ul class="nav navbar-nav navbar-right">
@@ -81,7 +81,7 @@ echo'<!DOCTYPEhtml>
 
           <div class="form-group">
             <label for="genero">Genero </label>
-            <select name="genero">';
+            <select name="genero" class="form-control">';
               $enlace = mysqli_connect("localhost","root","root","mydb");
               if(!$enlace){
                 echo "No se pudo conectar".mysqli_connect_error();
@@ -100,7 +100,7 @@ echo'<!DOCTYPEhtml>
           </div>
           <div class="form-group">
             <label for="clasificacion">Clasificación</label>
-            <select name="clasificacion">';
+            <select name="clasificacion" class="form-control">';
               $enlace = mysqli_connect("localhost","root","root","mydb");
               if(!$enlace){
                 echo "No se pudo conectar".mysqli_connect_error();
