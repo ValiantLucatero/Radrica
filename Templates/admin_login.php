@@ -17,7 +17,7 @@ echo'<!DOCTYPEhtml>
     SESSION_START();
     if(isset($_POST['admin_user']) && isset($_POST['password']))
     {
-      $enlace = mysqli_connect("localhost","root","","mydb");
+      $enlace = mysqli_connect("localhost","root","root","mydb");
       htmlspecialchars($_POST['admin_user']);
       htmlspecialchars($_POST['password']);
       mysqli_real_escape_string($enlace,$_POST['admin_user']);
@@ -199,7 +199,7 @@ echo'<!DOCTYPEhtml>
             <div class="caption">
               <h3>Agregar/Eliminar administradores</h3>
               <p>Agregar otros administradores secundarios.</p>
-              <p><button><a class="btn btn-primary" role="button" data-toggle="modal" data-target="#registrar_admin"> Agregar </a></button> 
+              <p><button><a class="btn btn-primary" role="button" data-toggle="modal" data-target="#registrar_admin"> Agregar </a></button>
 			  <button> <a href="#" class="btn btn-danger" role="button">Eliminar</a></button></p>
             </div>
           </div>
