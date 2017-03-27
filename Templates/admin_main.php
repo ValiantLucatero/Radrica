@@ -153,7 +153,7 @@ echo'<!DOCTYPEhtml>
     }
     echo '<h1 class="text-center">Bienvenido '.$_SESSION['Nombre_Administrador'].'</h1>
     <div class="row">
-      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+      <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
         <div class="thumbnail">
           <div class="caption">
             <h3>Agregar películas</h3>
@@ -164,7 +164,7 @@ echo'<!DOCTYPEhtml>
       </div>
 
 
-      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+      <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
         <div class="thumbnail">
           <div class="caption">
             <h3>Agregar a Cartelera</h3>
@@ -174,7 +174,7 @@ echo'<!DOCTYPEhtml>
         </div>
       </div>
 
-      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+      <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
         <div class="thumbnail">
           <div class="caption">
             <h3>Eliminar de cartelera</h3>
@@ -184,7 +184,7 @@ echo'<!DOCTYPEhtml>
         </div>
       </div>
 
-      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+      <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
         <div class="thumbnail">
           <div class="caption">
             <h3>Agregar funciones</h3>
@@ -194,12 +194,13 @@ echo'<!DOCTYPEhtml>
         </div>
       </div>';
       if($_SESSION['Tipo_Administrador']==1){
-        echo '<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+        echo '<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
           <div class="thumbnail">
             <div class="caption">
-              <h3>Agregar/Eliminar administradores</h3>
-              <p>Agregar otros administradores secundarios.</p>
-              <p><a href="#" class="btn btn-primary" role="button">Agregar</a> <a href="#" class="btn btn-danger" role="button">Eliminar</a></p>
+                <h3>Agregar/Eliminar administradores</h3>
+                <p>Agregar otros administradores secundarios.</p>
+                <p><button><a class="btn btn-primary" role="button" data-toggle="modal" data-target="#registrar_admin"> Agregar </a></button>
+			          <button> <a href="#" class="btn btn-danger" role="button">Eliminar</a></button></p>
             </div>
           </div>
         </div>';
@@ -210,11 +211,66 @@ echo'<!DOCTYPEhtml>
     else{
       header('location:error_ingreso.html');
     }
-    echo '</div>
+    echo '<div class="modal fade" id="registrar_admin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h3 class="modal-title" id="myModalLabel">Registrar administrador <small>Únicamente como estudiante</small></h3>
+					</div>
+					<div class="modal-body">
+						<div class="row">
+							<div class="col-lg-12 col-xs-12">
+								<form class="form-horizontal" method="POST" action="registro_admin.php">
+									<div class="form-group">
+										<label for="cor" class="col-lg-3 control-label">Correo electrónico:</label>
+										<div class="col-lg-9">
+											<input type="text" class="form-control" id="correo" placeholder="Correo"/>
+										</div></br>
+									</div>
+									<div class="form-group">
+										<label for="nom" class="col-lg-3 control-label">Nombre:</label>
+										<div class="col-lg-9">
+											<input type="text" class="form-control" id="nombre" placeholder="Nombre "/>
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="pat" class="col-lg-3 control-label">Apellido paterno: </label>
+										<div class="col-lg-9">
+											<input type="text" class="form-control" id="paterno" placeholder="Apellido paterno"/>
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="mat" class="col-lg-3 control-label">Apellido materno: </label>
+										<div class="col-lg-9">
+											<input type="text" class="form-control" id="materno" placeholder="Apellido materno"/>
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="con" class="col-lg-3 control-label">Contraseña: </label>
+										<div class="col-lg-9">
+											<input type="password" class="form-control" id="contrasena" placeholder="Contraseña"/>
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="cont" class="col-lg-3 control-label">Repetir Contraseña: </label>
+										<div class="col-lg-9">
+											<input type="password" class="form-control" id="password" placeholder="Contraseña"/>
+										</div>
+									</div>
+									<button class="btn btn-lg btn-block btn-primary" type="submit">Registrarse</button>
+								</form>
+							</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>';
 
 
-    <script src="../Resources/jquery/dist/jquery.js"></script>
-    <script src="../Resources/bootstrap/dist/js/bootstrap.min.js"></script>
-  </body>
-</html>';
+    echo '<script src="../Resources/jquery/dist/jquery.js"></script>';
+    echo '<script src="../Resources/bootstrap/dist/js/bootstrap.min.js"></script>';
+	echo '</body> </html>';
 ?>
