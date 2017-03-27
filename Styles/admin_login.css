@@ -26,3 +26,7 @@ form #loginadmin{
   margin: 0 auto;
   margin-top: 5%;
 }
+table tr td img{
+  height: 30%;
+  width: 20%;
+}

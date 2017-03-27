@@ -1,4 +1,3 @@
-var i=0;
 $("button#search").click(function(){
   $.ajax({
     url:"../Templates/add_movies_cartel.php",
@@ -13,6 +12,9 @@ $("button#search").click(function(){
   });
   var algo=$("table").attr("id");
   console.log(algo);
-  //$("table#pelis").html("<tr><td>Hola</td></tr>");
-  i++;
 });
+
+function agregar(x){
+  var h="hey";
+  console.log('hola');
+}

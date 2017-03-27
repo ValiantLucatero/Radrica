@@ -57,6 +57,46 @@ echo'<!DOCTYPEhtml>
     else {
       header('location:error_ingreso.html');
     }
+    $enlace= mysqli_connect("localhost","root","root","mydb");
+    if(!$enlace)
+    {
+      echo "No se pudo conectar".mysqli_connect_error();
+    }
+    else
+    {
+      $tildes = $enlace -> query("SET NAMES 'utf8'");
+      $peticion1='SELECT ID_Horario, Horario FROM Horario';
+      $pedir1=mysqli_query($enlace,$peticion1);
+      $horarios_select="<select class='form-control'>";
+      while($row=mysqli_fetch_assoc($pedir1)){
+        $horarios_select=$horarios_select."<option value='".$row['ID_Horario']."'>".$row['Horario']."</option>";
+      }
+      $horarios_select=$horarios_select."</select>";
+    }
+    echo '<div class="modal fade" id="dar_horario" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h3 class="modal-title" id="myModalLabel">Agregar Horario</h3>
+					</div>
+					<div class="modal-body">
+						<div class="row">
+							<div class="col-lg-12 col-xs-12">
+								<form class="form-horizontal" method="POST" action="#">
+									<div class="form-group">
+										<label for="cont" class="col-lg-3 control-label">Horario: </label>
+										<div class="col-lg-9">'.$horarios_select.'</div>
+									</div>
+									<button class="btn btn-lg btn-block btn-primary" type="submit">Registrarse</button>
+								</form>
+							</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>';
     echo '</div>
     <script src="../Resources/jquery/dist/jquery.js"></script>
     <script type="text/javascript" src="../Styles/agregar_cartelera.js"></script>
