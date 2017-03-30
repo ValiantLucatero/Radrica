@@ -199,8 +199,13 @@ echo'<!DOCTYPEhtml>
             <div class="caption">
                 <h3>Agregar/Eliminar administradores</h3>
                 <p>Agregar otros administradores secundarios.</p>
+<<<<<<< HEAD
+                <p><button><a class="btn btn-primary" role="button" data-toggle="modal" data-target="#registrar_admin"> Agregar </a></button>
+			          <button> <a href="#" class="btn btn-danger" role="button">Eliminar</a></button></p>
+=======
                 <p><button class="btn btn-primary" role="button" data-toggle="modal" data-target="#registrar_admin"> Agregar</button>
 			          <button href="#" class="btn btn-danger" role="button">Eliminar</button></p>
+>>>>>>> 4b444d2f9edea7ff93a2121fddb69b4c2f5dad20
             </div>
           </div>
         </div>';
