@@ -63,7 +63,7 @@ echo'<!DOCTYPEhtml>
           </div>
           <div class="form-group">
             <label for="duracion">Duración (en minutos)</label>
-            <input type="number" min="10" max="500" class="form-control" id="duracion" placeholder="Año de la película" name="duracion"/>
+            <input type="number" min="10" max="500" class="form-control" id="duracion" placeholder="Duración de la película" name="duracion"/>
           </div>
           <div class="form-group">
             <label for="subtitulos">Subtítulos</label>
@@ -120,10 +120,10 @@ echo'<!DOCTYPEhtml>
 
           <div class="form-group">
             <label for="cast">Actores (separados por comas)</label>
-            <input type="text" maxlength="60" class="form-control" id="cast" placeholder="Año de la película" name="cast"/>
+            <input type="text" maxlength="60" class="form-control" id="cast" placeholder="Actores" name="cast"/>
           </div>
           <div class="form-group">
-            <label for="sinopsis">Sinopsis (separados por comas)</label>
+            <label for="sinopsis">Sinopsis</label>
             <textarea name="sinopsis" class="form-control" rows="5" placeholder="Sinopsis de la película"></textarea>
           </div>
           <div class="form-group">
