@@ -15,11 +15,8 @@
     {
       $patabla=$patabla."<tr>";
       $patabla=$patabla.'<td>'.$row['ID_Peliculas'].'</td>';
-<<<<<<< HEAD
       $patabla=$patabla.'<td><img src="../Resources/'.$row['Titulo_Peliculas'].'.jpg" height="30%" onclick="agregar(this)"/></td><td><span class="n'.$row['ID_Peliculas'].'">'.$row['Titulo_Peliculas'].'</span></td>';
-=======
       $patabla=$patabla.'<td><img src="../Resources/'.$row['Titulo_Peliculas'].'.jpg" height="30%"/></td><td>'.$row['Titulo_Peliculas'].'</td>';
->>>>>>> 4b444d2f9edea7ff93a2121fddb69b4c2f5dad20
       if($row['Sub_Peliculas']==1)
         $sub='Sí';
       else {

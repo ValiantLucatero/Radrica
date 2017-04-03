@@ -67,11 +67,8 @@ echo'<!DOCTYPEhtml>
       $tildes = $enlace -> query("SET NAMES 'utf8'");
       $peticion1='SELECT ID_Horario, Horario FROM Horario';
       $pedir1=mysqli_query($enlace,$peticion1);
-<<<<<<< HEAD
       $horarios_select="<select class='form-control' id='select_horario' name='horario'>";
-=======
       $horarios_select="<select class='form-control'>";
->>>>>>> 4b444d2f9edea7ff93a2121fddb69b4c2f5dad20
       while($row=mysqli_fetch_assoc($pedir1)){
         $horarios_select=$horarios_select."<option value='".$row['ID_Horario']."'>".$row['Horario']."</option>";
       }
@@ -82,11 +79,8 @@ echo'<!DOCTYPEhtml>
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-<<<<<<< HEAD
 						<h3 class="modal-title" id="myModalLabel">Agregar Horario <small class="no">Holas</small></h3>
-=======
 						<h3 class="modal-title" id="myModalLabel">Agregar Horario</h3>
->>>>>>> 4b444d2f9edea7ff93a2121fddb69b4c2f5dad20
 					</div>
 					<div class="modal-body">
 						<div class="row">
@@ -96,11 +90,8 @@ echo'<!DOCTYPEhtml>
 										<label for="cont" class="col-lg-3 control-label">Horario: </label>
 										<div class="col-lg-9">'.$horarios_select.'</div>
 									</div>
-<<<<<<< HEAD
 									<button class="btn btn-lg btn-block btn-primary" type="button" id="boton_modal">Registrarse</button>
-=======
 									<button class="btn btn-lg btn-block btn-primary" type="submit">Registrarse</button>
->>>>>>> 4b444d2f9edea7ff93a2121fddb69b4c2f5dad20
 								</form>
 							</div>
 							</div>

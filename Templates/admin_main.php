@@ -174,7 +174,7 @@ echo'<!DOCTYPEhtml>
         </div>
       </div>
 
-      <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
+      <!--<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
         <div class="thumbnail">
           <div class="caption">
             <h3>Eliminar de cartelera</h3>
@@ -182,9 +182,9 @@ echo'<!DOCTYPEhtml>
             <p><a href="#" class="btn btn-primary" role="button">Eliminar</a></p>
           </div>
         </div>
-      </div>
+      </div>-->
 
-      <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
+      <!--<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
         <div class="thumbnail">
           <div class="caption">
             <h3>Agregar funciones</h3>
@@ -192,20 +192,16 @@ echo'<!DOCTYPEhtml>
             <p><a href="#" class="btn btn-primary" role="button">Agregar funciones</a></p>
           </div>
         </div>
-      </div>';
+      </div>-->';
+
       if($_SESSION['Tipo_Administrador']==1){
         echo '<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
           <div class="thumbnail">
             <div class="caption">
                 <h3>Agregar/Eliminar administradores</h3>
                 <p>Agregar otros administradores secundarios.</p>
-<<<<<<< HEAD
-                <p><button><a class="btn btn-primary" role="button" data-toggle="modal" data-target="#registrar_admin"> Agregar </a></button>
-			          <button> <a href="#" class="btn btn-danger" role="button">Eliminar</a></button></p>
-=======
                 <p><button class="btn btn-primary" role="button" data-toggle="modal" data-target="#registrar_admin"> Agregar</button>
-			          <button href="#" class="btn btn-danger" role="button">Eliminar</button></p>
->>>>>>> 4b444d2f9edea7ff93a2121fddb69b4c2f5dad20
+			          <a href="editar_admin.php" class="btn btn-danger" role="button">Eliminar</a></p>
             </div>
           </div>
         </div>';

@@ -82,7 +82,7 @@ echo'<!DOCTYPEhtml>
           <div class="form-group">
             <label for="genero">Genero </label>
             <select name="genero" class="form-control">';
-              $enlace = mysqli_connect("localhost","root","root","mydb");
+              $enlace = mysqli_connect("localhost","root","","mydb");
               if(!$enlace){
                 echo "No se pudo conectar".mysqli_connect_error();
               }
