@@ -80,7 +80,6 @@ echo'<!DOCTYPEhtml>
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 						<h3 class="modal-title" id="myModalLabel">Agregar Horario <small class="no">Holas</small></h3>
-						<h3 class="modal-title" id="myModalLabel">Agregar Horario</h3>
 					</div>
 					<div class="modal-body">
 						<div class="row">
@@ -90,8 +89,7 @@ echo'<!DOCTYPEhtml>
 										<label for="cont" class="col-lg-3 control-label">Horario: </label>
 										<div class="col-lg-9">'.$horarios_select.'</div>
 									</div>
-									<button class="btn btn-lg btn-block btn-primary" type="button" id="boton_modal">Registrarse</button>
-									<button class="btn btn-lg btn-block btn-primary" type="submit">Registrarse</button>
+									<button class="btn btn-lg btn-block btn-primary" type="submit" id="boton_modal">Registrarse</button>
 								</form>
 							</div>
 							</div>
